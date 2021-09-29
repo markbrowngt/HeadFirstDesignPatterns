@@ -19,10 +19,10 @@ namespace ObserverPattern
             Console.WriteLine($"Current conditions: {Temperature}F degrees and {Humidity}% humidity.");
         }
 
-        public void Update(decimal temp, decimal humidity, decimal pressure)
+        public void Update()
         {
-            Temperature = temp;
-            Humidity = humidity;
+            Temperature = _weatherData.Temperature;
+            Humidity = _weatherData.Humidity;
             Display();
         }
     }

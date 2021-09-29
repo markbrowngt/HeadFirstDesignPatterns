@@ -40,10 +40,10 @@ namespace ObserverPattern
             Console.WriteLine($"Forecast: {ForecastText()}");
         }
 
-        public void Update(decimal temp, decimal humidity, decimal pressure)
+        public void Update()
         {
             LastPressure = CurrentPressure;
-            CurrentPressure = pressure;
+            CurrentPressure = _weatherData.Pressure;
             Display();
         }
     }

@@ -32,9 +32,9 @@ namespace ObserverPattern
 			(0.0000000000481975m * (temp * temp * temp * humidity * humidity * humidity)));
         }
 
-        public void Update(decimal temp, decimal humidity, decimal pressure)
+        public void Update()
         {
-            HeatIndex = ComputeHeatIndex(temp, humidity);
+            HeatIndex = ComputeHeatIndex(_weatherData.Temperature, _weatherData.Humidity);
             Display();
         }
     }

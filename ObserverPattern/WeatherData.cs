@@ -24,7 +24,7 @@ namespace ObserverPattern
         {
             foreach(var o in Observers)
             {
-                o.Update(Temperature, Humidity, Pressure);
+                o.Update();
             }
         }
 

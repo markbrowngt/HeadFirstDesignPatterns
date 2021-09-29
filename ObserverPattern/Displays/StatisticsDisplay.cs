@@ -21,9 +21,9 @@ namespace ObserverPattern
             Console.WriteLine($"Avg/Max/Min temperature: {Temperatures.Average()}/{Temperatures.Max()}/{Temperatures.Min()}.");
         }
 
-        public void Update(decimal temp, decimal humidity, decimal pressure)
+        public void Update()
         {
-            Temperatures.Add(temp);
+            Temperatures.Add(_weatherData.Temperature);
             Display();
         }
     }
